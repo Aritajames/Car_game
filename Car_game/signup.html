@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign up</title>
+    <style>
+        body {font-family: cursive;font-style: italic}
+
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        /* Center the image and position the close button */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+
+        .container {
+            padding: 16px;
+        }
+
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button (x) */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+
+        /* Add Zoom Animation */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {-webkit-transform: scale(0)}
+            to {-webkit-transform: scale(1)}
+        }
+
+        @keyframes animatezoom {
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+
+        /* Change styles for span and cancel button on extra small screens */
+        @media screen and (max-width: 300px) {
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body style="text-align: center">
+
+<br><br><br><br><br><br><br>
+<h1>CARISMA MOTORS</h1>
+<h2>Sign up with us</h2>
+    <hr><br>
+    <h4>Press the Sign up button to continue</h4>
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="font-style: italic;font-family: cursive;color: black">Sign up</button>
+
+<button style="font-style: italic;font-family: cursive;"><a href="index.html">Back Home</a></button>
+
+<div id="id01" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <h1>Carisma Motors</h1>
+        </div>
+
+        <div class="container">
+            <label for="username" style="font-family: cursive;font-style: italic"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required style="font-family: cursive;font-style: italic">
+
+            <label for="password" style="font-family: cursive;font-style: italic"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required style="font-family: cursive;font-style: italic">
+
+            <label for="password" style="font-family: cursive;font-style: italic"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Confirm Password" name="psw" required style="font-family: cursive;font-style: italic">
+
+            <button type="submit" style="font-family: cursive;font-style: italic">Sign up</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember" style="font-family: cursive;font-style: italic"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="font-family: cursive;font-style: italic">Cancel</button>
+
+        </div>
+    </form>
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+<br><br><br><br><br>
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4" style="background-color: black;color: white">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+        <!-- Grid row -->
+
+        <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+                <!-- Contact details -->
+                <h4 class="font-weight-bold text-uppercase mb-4" style="font-family: cursive;font-style: italic">ADDRESS</h4>
+
+                <ul class="list-unstyled" style="font-style: italic;font-family: cursive">
+                    <li>
+                        <p>
+                            <i class="fas fa-home mr-3"></i>P.O.Box 92-40200, KISII</p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i> info@carismamotors.com</p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i> +254 707098320</p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-print mr-3"></i> +254 774223918</p>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+
+                <h4 class="font-weight-bold text-uppercase mb-4" style="font-family: cursive;font-style: italic">FOLLOW US</h4>
+                <h5 style="font-family: cursive;font-style: italic">Facebook ~ Carisma Motors</h5>
+                <h5 style="font-family: cursive;font-style: italic">Twitter ~ @Carisma_Motors</h5>
+                <h5 style="font-family: cursive;font-style: italic">Instagram ~ Carisma Motors</h5>
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="font-style: italic;font-family: cursive">© 2019 Copyright:
+        <a href="https://mdbootstrap.com/education/bootstrap/" style="font-family: cursive;font-style: italic">carismamotors.com</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</body>
+</html>
